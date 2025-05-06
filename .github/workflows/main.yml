@@ -1,9 +1,9 @@
-name: Kernel Build
+name: Kernel Build2
 
 on:
   push:
     branches:
-      - ksu-luna  # Change this to your desired branch if it's not 'main'
+      - WIP2  # Change this to your desired branch if it's not 'main'
 
 jobs:
   build:
