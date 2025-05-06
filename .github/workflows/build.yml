@@ -3,7 +3,7 @@ name: Kernel Build
 on:
   push:
     branches:
-      - ksu-luna  # Change this to your desired branch if it's not 'main'
+      - WIP3  # Change this to your desired branch if it's not 'main'
 
 jobs:
   build:
