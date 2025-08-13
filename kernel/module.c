@@ -3618,6 +3618,10 @@ static int load_module(struct load_info *info, const char __user *uargs,
 	long err;
 	char *after_dashes;
 
+	/* Dirty fix to load proprietary modules temporarily (TODO) */
+	flags |= MODULE_INIT_IGNORE_MODVERSIONS;
+	flags |= MODULE_INIT_IGNORE_VERMAGIC;
+
 	err = module_sig_check(info, flags);
 	if (err)
 		goto free_copy;
