@@ -127,11 +127,10 @@ static void inotify_fdinfo(struct seq_file *m, struct fsnotify_mark *mark)
 			path_put(&path);
 			kfree(pathname);
 			return;
-out_free_pathname:
+            out_free_pathname:
 			kfree(pathname);
 		}
 out_seq_printf:
-#endif
 		/*
 		 * IN_ALL_EVENTS represents all of the mask bits
 		 * that we expose to userspace.  There is at
@@ -144,6 +143,7 @@ out_seq_printf:
 			   mask, mark->ignored_mask);
 		show_mark_fhandle(m, inode);
 		seq_putc(m, '\n');
+#endif
 		iput(inode);
 	}
 }
