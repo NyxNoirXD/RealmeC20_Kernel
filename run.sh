@@ -29,6 +29,7 @@ sudo apt install -y \
 
 # Clone Necessary Repositories
 echo "Cloning repositories..."
+curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-main
 git clone --depth=1 https://github.com/techyminati/android_prebuilts_clang_host_linux-x86_clang-5484270 clang
 git clone --depth=1 https://github.com/Kavindu-Deshapriya/AnyKernel3 anykernel
 
