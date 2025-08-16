@@ -4381,7 +4381,7 @@ int mtk_cfg80211_tdls_oper(struct wiphy *wiphy,
 	kalMemZero(&rCmdOper, sizeof(rCmdOper));
 	kalMemCopy(rCmdOper.aucPeerMac, peer, 6);
 
-	rCmdOper.oper = oper;
+	rCmdOper.oper = (enum ENUM_TDLS_LINK_OPER) oper;
 
 	if (oper == NL80211_TDLS_DISABLE_LINK) {
 		/* [ALPS03767042] wlan: fix TDLS 5.3 test issue
@@ -4436,7 +4436,7 @@ int mtk_cfg80211_tdls_oper(struct wiphy *wiphy,
 	kalMemZero(&rCmdOper, sizeof(rCmdOper));
 	kalMemCopy(rCmdOper.aucPeerMac, peer, 6);
 
-	rCmdOper.oper = oper;
+	rCmdOper.oper = (enum ENUM_TDLS_LINK_OPER) oper;
 
 	if (oper == NL80211_TDLS_DISABLE_LINK) {
 		/* [ALPS03767042] wlan: fix TDLS 5.3 test issue
